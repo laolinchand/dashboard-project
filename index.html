@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Authority Dashboard with Dynamic Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>Water Authority</h2>
+    </div>
+    <ul>
+      <li><a href="#">Dashboard View</a></li>
+      <li><a href="#">Organization Tree</a></li>
+      <li><a href="#">Create Employee ID</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button>
+      <button id="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Dashboard</h1>
+    <!-- Dashboard Cards -->
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Total Water Usage</h3>
+        <p>1,250,000 Litres</p>
+      </div>
+      <div class="card">
+        <h3>Active Customers</h3>
+        <p>56,000</p>
+      </div>
+      <div class="card">
+        <h3>Revenue (FJD)</h3>
+        <p>$3.5M</p>
+      </div>
+      <div class="card">
+        <h3>Pending Payments</h3>
+        <p>$200,000</p>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+      <canvas id="departmentChart"></canvas>
+    </div>
+
+    <button id="updateDataBtn">Update Data</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
